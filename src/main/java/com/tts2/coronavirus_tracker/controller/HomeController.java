@@ -22,6 +22,7 @@ public class HomeController {
 	public String home (Model model) {
 		List<LocationStats> allStats = coronaVirusDataService.getAllStats();
 		//taking list of objects and converting it into a stream
+		//a stream is a sequence of objects the supports various methods that can be pipelined to the desired result
 		//then mapping it to an integer value which is the total cases for that record & then sums it up
 		int totalReportedCases = allStats.stream().mapToInt(stat -> stat.getLatestTotalCases()).sum();
 		int totalNewCases = allStats.stream().mapToInt(stat -> stat.getDiffFromPrevDay()).sum();

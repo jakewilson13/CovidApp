@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication
-//letting spring know that the method in the service needs to run everday
+//letting spring know that the method in the service needs to run everyday
 //spring automatically creates a proxy to run the method
 @EnableScheduling
 public class CoronavirusTrackerApplication {

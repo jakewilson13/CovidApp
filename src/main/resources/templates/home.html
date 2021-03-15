@@ -5,13 +5,15 @@
 	<title>Coronavirus Tracker Application</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link th:href="@{/stylesheets/style.css}" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
 <h1>Coronavirus Tracker Application</h1>
-<p>This Application lists the current number of cases across the globe</p>
+<p>This Application lists the current number of cases across the globe.</p>
 
 <div class="jumbotron">
+
   <h1 class="display-4" th:text="${totalReportedCases}"></h1>
   <p class="lead">Total number of cases reported as of Today.</p>
   <hr class="my-4">
